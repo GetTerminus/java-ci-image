@@ -1,1 +1,1 @@
-# java-ci-image
+# CI Image for Java
