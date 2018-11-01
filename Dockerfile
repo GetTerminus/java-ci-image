@@ -20,4 +20,4 @@ RUN wget -nv https://github.com/bazelbuild/bazel/releases/download/${BAZEL_VERSI
 
 # Delete install script (and containing folder)
 WORKDIR /
-RUN rm -r tools/
+RUN rm -r /tools/
