@@ -1,4 +1,4 @@
-FROM openjdk:8u181-jdk-slim-stretch
+FROM openjdk:11.0.5-jdk-slim-buster
 
 # Install dependencies for Bazel
 RUN apt-get -y update && apt-get install -y --no-install-recommends \
@@ -10,7 +10,7 @@ RUN apt-get -y update && apt-get install -y --no-install-recommends \
     python \
     wget
 
-ENV BAZEL_VERSION 0.21.0
+ENV BAZEL_VERSION 1.1.0
 WORKDIR /tools
 
 # Download and execute Bazel install script
