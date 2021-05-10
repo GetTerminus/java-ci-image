@@ -1,7 +1,5 @@
 FROM openjdk:11.0.11-jdk-slim-buster
 
-RUN apt-get update
-
 # https://github.com/geerlingguy/ansible-role-java/issues/64 - Remediates a bug (workaround)
 RUN mkdir /usr/share/man/man1/
 
