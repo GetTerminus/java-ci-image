@@ -1,4 +1,9 @@
-FROM openjdk:11.0.5-jdk-slim-buster
+FROM openjdk:11.0.11-jdk-slim-buster
+
+RUN apt-get update
+
+# https://github.com/geerlingguy/ansible-role-java/issues/64 - Remediates a bug (workaround)
+RUN mkdir /usr/share/man/man1/
 
 # Install dependencies for Bazel
 RUN apt-get -y update && apt-get install -y --no-install-recommends \
@@ -13,7 +18,8 @@ RUN apt-get -y update && apt-get install -y --no-install-recommends \
     apt-transport-https \
     ca-certificates \
     gnupg2 \
-    software-properties-common
+    software-properties-common \
+    ant
 
 RUN curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add -
 
