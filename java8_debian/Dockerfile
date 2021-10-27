@@ -1,4 +1,4 @@
-FROM openjdk:8u232-jdk-slim-buster
+FROM openjdk:8u302-jdk-slim-buster
 
 RUN mkdir -p /usr/share/man/man1mkdir -p /usr/share/man/man1
 
